@@ -1,0 +1,100 @@
+table {
+    caption-side: bottom;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-color: black;
+    padding: 1rem;
+    width: 50%;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    table-layout: fixed;
+}
+
+td {
+    width: 33%;
+}
+
+.col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.date-book {
+    text-decoration: none;
+
+}
+
+.alert {
+    position: absolute;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: darkblue;
+    background-color: light-green;
+    border: 2px solid green;
+    border-radius: 12%;
+    width: 50%;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+
+.table-head {
+    max-width: 60%;
+}
+
+.header {
+    margin: auto;
+    width: max-content;
+    font-size: 1.2rem;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem;
+    /* font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height); */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 2px solid black;
+    border-radius: 12%;
+    background-color: blue;
+    margin: 0.5rem 2rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.today {
+    border-color: yellow;
+    color: yellow;
+    border: 2px yellow solid;
+}

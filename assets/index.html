@@ -1,0 +1,65 @@
+<?php
+function build_calendar($month, $year)
+{
+    //First create an array of days of the week
+    $daysOfWeek = array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thusday', 'Friday', 'Satday');
+
+    //get the first day of the month
+    $firstDayOfMonth = mktime(0, 0, 0, $month, 1, $year);
+
+    //get number of days in month
+    $numberOfDays = date('t', $firstDayOfMonth);
+
+    //get other information about the first day of this month
+    $dateComponents = getDate($firstDayOfMonth);
+    $monthName = $dateComponents['month'];
+    $dayOfWeek = $dateComponents['wday'];
+    $dateToday = date('Y-m-d');
+
+
+    //create html table
+
+    $calendar = "<table class='table table-bordered'></table>";
+    $calendar .= "<center><h2>$monthName $year</h2></center>";
+    $calendar .= "<tr>";
+    //calendar headers
+    foreach ($daysOfWeek as $day) {
+        $calendar .= "<th class='header'>$day</th>";
+    }
+    $calendar .= "</tr>";
+    $calendar .= "<tr>";
+
+
+    $calendar .= "</tr>";
+}
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="160 chr of eyecatchin SEO content for google search written in good english" />
+    <meta name="keywords" content="keyword1, keyword2, etc" />
+    <author name="author" content="Yfke"></author>
+    <meta name="robots" content="index" />
+    <meta http-equiv="refresh" content="" 5;url="#" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Y. Bookings</title>
+  </head>
+  <body>
+    <header>
+      <h1>Booking Calendar</h1>
+    </header>
+    <container>
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </container>
+    <footer>
+      <p>
+        &copy;
+        <img src="./assets/branding/rose_Logo_22.png" alt="Yfkes logo" style="width: 70px" />
+        <script src="./scripts/script.js"></script>
+      </p>
+    </footer>
+  </body>
+</html>
